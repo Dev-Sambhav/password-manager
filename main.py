@@ -82,7 +82,7 @@ def find_password():
             data = json.load(data_file)
 
     except FileNotFoundError:
-        messagebox.showinfo(title="Error", message="No Data File Found!!!")
+        messagebox.showerror(title="Error", message="No Data File Found!!!")
     finally:
         if website in data:
             email = data[website]["email"]
@@ -102,9 +102,9 @@ window.title("Password Manager")
 window.config(pady=30, padx=50)
 
 canvas = Canvas(width=200, height=200, highlightthickness=0)
-logo = PhotoImage(file="logo.png")
+logo = PhotoImage(file="D:\Python\password-manager\logo2.png")
 canvas.create_image(100, 100, image=logo)
-canvas.grid(column=1, row=0)
+canvas.grid(column=1, row=0, pady=10)
 
 # website label
 web_label = Label(text="Website:")
